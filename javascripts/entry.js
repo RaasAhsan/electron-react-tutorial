@@ -2,6 +2,17 @@ require('../less/main.less');
 
 'use strict';
 
-import React from "react";
+var React = require('react');
+var ReactDOM = require('react-dom');
 
-React.render(<div className="myDiv">Hello Electron!</div>, document.getElementById('content'));
+var Entry = React.createClass({
+  render: function(){
+    return (
+      <div className="myDiv">
+        Hello Electron!
+      </div>
+    )
+  }
+});
+
+ReactDOM.render(<Entry />, document.getElementById('content'));
